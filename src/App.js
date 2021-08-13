@@ -16,6 +16,8 @@ import { useState, useEffect } from "react";
 import { getCatalog, getSecret, getLocale } from "./services/api";
 import url from "url";
 
+import meImage from "./images/me.jpg";
+
 
 function App() {
 
@@ -60,7 +62,7 @@ function App() {
             <div className={styles.mainContainer}>
               <div className={styles.photo}>
                 <div className={styles.myPictureContainer}>
-                  <div className={styles.myPicture}></div>
+                  <div style={{backgroundImage: `url(${meImage})`}} className={styles.myPicture}></div>
                 </div>
               </div>
               <div className={styles.contact}>

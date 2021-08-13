@@ -42,9 +42,10 @@
 .myPicture
 {
     width: 100%;
-    background-image: url("https://p0.pikist.com/photos/843/265/entrepreneurship-young-guy-boy-dude-suit-noble-undercut-black.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f2f1f6;
     border-radius: 50%;
 }
 .myPicture::after
