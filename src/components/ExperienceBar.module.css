@@ -1,0 +1,12 @@
+.container
+{
+    background-color: lightgray;
+    width: 100%;
+    border-radius: 4px;
+}
+.bar
+{
+    background-color: #6fff8e;
+    height: 8px;
+    border-radius: 4px;
+}

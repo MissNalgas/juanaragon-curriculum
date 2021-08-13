@@ -1,0 +1,23 @@
+.container
+{
+    position: relative;
+    --width: 45px;
+}
+.circle2
+{
+    stroke-dasharray: 313.652;
+    stroke-dashoffset: 150;
+}
+.image
+{
+    width: var(--width);
+    height: var(--width);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,25 @@
+.container
+{
+    position: relative;
+    --size: 50px;
+    --border-radius: 10px;
+}
+.background
+{
+    width: var(--size);
+    height: var(--size);
+    filter: grayscale(1);
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+}
+.foreground
+{
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+}

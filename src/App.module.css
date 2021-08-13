@@ -1,0 +1,109 @@
+.mainContainer
+{
+    width: 95vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "photo contact contact contact contact"
+                         "languages other other other other"
+                         "languages work work work work"
+                         "lifeline lifeline lifeline lifeline lifeline"
+                         "separator separator separator separator separator"
+                         "planguages planguages dbases dbases dbases"
+                         "backend backend frontend frontend frontend";
+}
+.centerText
+{
+    text-align: center;
+}
+.pageSeparator
+{
+    grid-area: separator;
+    height: 500px;
+}
+.photo
+{
+    grid-area: photo;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee344e;
+}
+.myPictureContainer
+{
+    width: 100%;
+    border-radius: 50%;
+    border: rgb(236, 235, 235) 5px solid;
+    padding: 5px;
+}
+.myPicture
+{
+    width: 100%;
+    background-image: url("https://p0.pikist.com/photos/843/265/entrepreneurship-young-guy-boy-dude-suit-noble-undercut-black.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+.myPicture::after
+{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.contact
+{
+    grid-area: contact;
+    padding: 10px;
+    text-align: center;
+}
+.languages
+{
+    grid-area: languages;
+}
+.work
+{
+    grid-area: work;
+}
+.other
+{
+    grid-area: other;
+}
+.lifeline
+{
+    grid-area: lifeline;
+}
+.squareGrid
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.squareGrid li
+{
+    margin: 10px;
+}
+.pLanguages
+{
+    grid-area: planguages;
+}
+.dbases
+{
+    grid-area: dbases;
+}
+.backend
+{
+    grid-area: backend;
+}
+.frontend
+{
+    grid-area: frontend;
+}
+@media screen and (min-width: 900px) {
+    .mainContainer
+    {
+        width: 800px;
+    }
+}
