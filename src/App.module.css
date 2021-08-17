@@ -7,6 +7,7 @@
     grid-template-areas: "photo contact contact contact contact"
                          "languages other other other other"
                          "languages work work work work"
+                         "languages extras extras extras extras"
                          "lifeline lifeline lifeline lifeline lifeline"
                          "separator separator separator separator separator"
                          "planguages planguages dbases dbases dbases"
@@ -19,7 +20,7 @@
 .pageSeparator
 {
     grid-area: separator;
-    height: 500px;
+    height: 150px;
 }
 .photo
 {
@@ -71,6 +72,10 @@
 .other
 {
     grid-area: other;
+}
+.extras
+{
+    grid-area: extras;
 }
 .lifeline
 {

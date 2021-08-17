@@ -100,6 +100,16 @@ function App() {
                 <h3 className={styles.centerText}>{locale.workExperience}</h3>
                 <WorkCard locale={locale} title={locale.contentModerator} description={locale.contentModeratorFor}/>
               </div>
+              <div className={styles.extras}>
+                <h3 className={styles.centerText}>{locale.extras}</h3>
+                <ul>
+                  <li>{locale.experienceUsing}.</li>
+                  <li>{locale.experienceWithThe}.</li>
+                  <li>{locale.experienceUsingSSH}.</li>
+                  <li>{locale.experienceUsingTheRTMP}.</li>
+                  <li>{locale.experienceDeploying}.</li>
+                </ul>
+              </div>
               <div className={styles.lifeline}>
                  
               </div>
