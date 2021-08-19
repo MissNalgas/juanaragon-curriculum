@@ -6,8 +6,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "photo contact contact contact contact"
                          "languages other other other other"
-                         "languages work work work work"
-                         "languages extras extras extras extras"
+                         "work work work work work"
+                         "extras extras extras extras extras"
                          "lifeline lifeline lifeline lifeline lifeline"
                          "separator separator separator separator separator"
                          "planguages planguages dbases dbases dbases"
@@ -111,5 +111,18 @@
     .mainContainer
     {
         width: 800px;
+    }
+}
+@media screen and (min-width:  768px) {
+    .mainContainer
+    {
+        grid-template-areas: "photo contact contact contact contact"
+                         "languages other other other other"
+                         "languages work work work work"
+                         "languages extras extras extras extras"
+                         "lifeline lifeline lifeline lifeline lifeline"
+                         "separator separator separator separator separator"
+                         "planguages planguages dbases dbases dbases"
+                         "backend backend frontend frontend frontend";
     }
 }
