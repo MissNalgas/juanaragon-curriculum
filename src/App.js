@@ -11,6 +11,7 @@ import WorkCard from "./components/WorkCard";
 import ExperienceBar from "./components/ExperienceBar";
 import ExperienceCircle from "./components/ExperienceCircle";
 import Menu from "./components/Menu";
+import Toast from "./components/Toast";
 
 import { useState, useEffect } from "react";
 import { getCatalog, getSecret, getLocale } from "./services/api";
@@ -26,6 +27,7 @@ function App() {
   const [isPdf, setIsPdf] = useState(false);
   const [currentLocale, setCurrentLocale] = useState({locale: "en"});
   const [key, setKey] = useState("");
+  const [toast, setToast] = useState({show: false, content: ""});
 
   useEffect(() => {
 
@@ -48,16 +50,28 @@ function App() {
 
   }, [])
 
+  const showToast = (c) => {
+    setToast({show: true, content: c});
+    setTimeout(() => {
+      setToast((s) => ({show: false, content: s.content}));
+    }, 4000);
+  }
+
+
   useEffect(() => {
+    if (key === "" || !("invalidKey" in locale)) return;
     getSecret(key).then((data) => {
       setSecret(data);
-    }).catch(() => {
+    }).catch((err) => {
       setSecret({});
+      showToast(locale.invalidKey);
     })
-  }, [key])
+  }, [key, locale])
 
+  
 
   return  <div>
+            <Toast show={toast.show} content={toast.content}/>
             { !isPdf && <Menu setKey={setKey}  secretKey={key} locale={locale} currentLocale={currentLocale}/>}
             <div className={styles.mainContainer}>
               <div className={styles.photo}>
